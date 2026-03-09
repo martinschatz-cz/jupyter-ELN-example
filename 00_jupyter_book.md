@@ -16,19 +16,85 @@ conda env create -f environment.yml
 conda activate jp_eln_env
 ```
 
-## Project initialization (Cookiecutter)
+## Project initialization (Jupyter Book v2)
 
-Use the official cookiecutter template to scaffold a Jupyter Book project, or create the book directory manually.
+Initialize a minimal Jupyter Book skeleton and add your content. For v2 the lightweight entrypoint is `init`.
 
 ```bash
-# Install cookiecutter if needed
-pip install cookiecutter
+# Initialize a new book (creates a minimal skeleton in `mybook`)
+jupyter-book init mybook
 
-# Run the Jupyter Book cookiecutter template
-cookiecutter https://github.com/executablebooks/cookiecutter-jupyter-book
+# (alternate) some installations use 'create' instead
+# jupyter-book create mybook
 ```
 
-During the cookiecutter run you will be prompted for a book title and repository name. After the template is created, move your existing notebooks (for example the files under `Jupyter Notebook/`) into the new book folder (typically `book/` or `my-book/`).
+Place your notebooks and markdown pages in `mybook/` (common layouts: `mybook/content/` or `mybook/notebooks/`). Example structure:
+
+```text
+mybook/
+  ├─ _config.yml
+  ├─ _toc.yml
+  ├─ content/
+  │   ├─ index.md
+  │   └─ 01-JN_and_JSON.ipynb
+  └─ notebooks/  # optional
+```
+
+If you prefer the cookiecutter template you can still use it, but `init` is the recommended quick start for v2.
+
+### MyST configuration (`myst.yml`)
+
+Jupyter Book v2 commonly uses `myst.yml` at the book root to configure the MyST parser and site metadata. It can hold parser extension flags, project metadata, and even a canonical table-of-contents (though `_toc.yml` is still supported).
+
+Below is an example `myst.yml` adapted from this repository (place at `mybook/myst.yml` or at the repo root if you prefer a single config):
+
+```yaml
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 6c784919-2ea5-4705-9f76-c1e30cb1c89b
+  title: Example ELN with Jupyter Notebook
+  description: This repository contains an example of how to use Jupyter Notebook as an Electronic Lab Notebook (ELN).
+  authors: [Martin Schätz]
+  github: https://github.com/martinschatz-cz/jupyter-ELN-example
+  license: MIT
+
+# Optional: a canonical TOC you maintain in myst.yml instead of _toc.yml
+toc:
+  - file: README.md
+  - file: 00_jupyter_book.md
+  - title: Jupyter Notebook
+    children:
+      - file: Jupyter Notebook/01-JN_and_JSON.ipynb
+      - file: Jupyter Notebook/02-Extracting_metadata.ipynb
+      - file: Jupyter Notebook/03_JN_as_ELN.ipynb
+  - title: ELN Example
+    children:
+      - file: Jupyter Notebook/Example/ELN_Adelie_Penguins.ipynb
+      - file: Jupyter Notebook/Example/ELN_Chinstrap_Penguins.ipynb
+      - file: Jupyter Notebook/Example/ELN_Gentoo_Penguins.ipynb
+      - file: Jupyter Notebook/Example/ELN_results.ipynb
+
+site:
+  template: book-theme
+  options:
+    footer: |
+      <p>Copyright © 2026 Martin Schätz. Licensed under <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+# MyST parser options
+myst_enable_extensions:
+  - deflist
+  - html_admonition
+  - html_image
+  - linkify
+
+myst_heading_anchors: 3
+```
+
+Notes:
+- If `jupyter-book init` already created a `myst.yml`, edit it to enable extensions and add project metadata.
+- You can put parser options either in `myst.yml` or under the `myst:` key inside `_config.yml`; `myst.yml` is the preferred standalone file for MyST frontmatter and site metadata in recent templates.
+- If you maintain a `toc:` in `myst.yml`, avoid duplicating it in `_toc.yml` to prevent conflicting navigation.
 
 ## Configuration & table of contents
 
@@ -67,16 +133,19 @@ execute:
 
 Adjust execution, theme, and plugin options as needed (for example, add `sphinx-book-theme` or `myst-parser` related settings if used).
 
-## Building the book
+## Building the book (HTML)
 
-From the book root directory run:
+Build the site as HTML (default). From the repository root or the book folder run:
 
 ```bash
-# Build the HTML site
-jupyter-book build .
+# start and show the content
+jupyter-book start
+
+# standard build (HTML is the default output)
+jupyter-book build --html
 ```
 
-After a successful build the static site will be in `_build/html/`.
+After a successful build the static site will be in `mybook/_build/html/` (or `_build/html/` if run from inside the book folder).
 
 ## View the site
 

@@ -8,3 +8,6 @@ Jupyter Notebook/Example/.ipynb_checkpoints/penguins_Chinstrap-checkpoint.csv
 Jupyter Notebook/Example/.ipynb_checkpoints/data_quality-checkpoint.py
 Jupyter Notebook/Example/.ipynb_checkpoints/ipnb_extraction-checkpoint.py
 *.pyc
+
+# MyST build outputs
+_build

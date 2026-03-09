@@ -11,6 +11,7 @@ To ensure consistent results, we use **conda-forge** as our primary package chan
 ### 1. Install Conda
 If you don't have Conda installed, we recommend **Miniforge**. It comes pre-configured with `conda-forge` and is lighter than the full Anaconda distribution.
 * **Get it here:** [Miniforge GitHub](https://github.com/conda-forge/miniforge)
+* **Git:** To clone this repository. [Download here](https://git-scm.com/downloads).
 
 ### 2. Create the Environment
 Navigate to the project root and run:
@@ -68,6 +69,25 @@ Docker Compose handles port mapping and volume mounting automatically, so your c
 
 ```bash
 docker-compose up
+```
+
+##### The Timestamp Method (Easiest)
+Use the current date and time as the version. This ensures every build has a unique, chronological ID.
+
+```
+APP_VERSION=$(date +%Y%m%d-%H%M%S) docker-compose up --build
+```
+
+PowerShell
+```
+$env:APP_VERSION = Get-Date -Format "yyyyMMdd-HHmm"
+docker-compose up --build
+```
+
+DOS
+```
+set APP_VERSION=%date:~10,4%%date:~4,2%%date:~7,2%-%time:~0,2%%time:~3,2%
+docker-compose up --build
 ```
 
 ## 💻 Operating System Specifics
