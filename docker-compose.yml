@@ -1,0 +1,16 @@
+services:
+  eln-notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work  # Syncs your local files with the container
+    # WARNING: Security bypass - No token or password set
+    command: >
+      jupyter lab 
+      --ip=0.0.0.0 
+      --port=8888 
+      --no-browser 
+      --allow-root 
+      --ServerApp.token=''     
+      --ServerApp.password=''

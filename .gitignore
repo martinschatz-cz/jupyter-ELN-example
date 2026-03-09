@@ -1,0 +1,13 @@
+/Jupyter Notebook/.ipynb_checkpoints
+Jupyter Notebook/Example/.ipynb_checkpoints/ELN_Adelie_Penguins-checkpoint.ipynb
+Jupyter Notebook/Example/.ipynb_checkpoints/ELN_Chinstrap_Penguins-checkpoint.ipynb
+Jupyter Notebook/Example/.ipynb_checkpoints/ELN_Gentoo_Penguins-checkpoint.ipynb
+Jupyter Notebook/Example/.ipynb_checkpoints/ELN_results-checkpoint.ipynb
+Jupyter Notebook/Example/.ipynb_checkpoints/penguins_Adelie-checkpoint.csv
+Jupyter Notebook/Example/.ipynb_checkpoints/penguins_Chinstrap-checkpoint.csv
+Jupyter Notebook/Example/.ipynb_checkpoints/data_quality-checkpoint.py
+Jupyter Notebook/Example/.ipynb_checkpoints/ipnb_extraction-checkpoint.py
+*.pyc
+
+# MyST build outputs
+_build

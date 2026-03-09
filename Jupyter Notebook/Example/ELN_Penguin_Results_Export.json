@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "record_type": "ELN_AGGREGATED_RESULTS",
+    "version": "1.0",
+    "created_date": "2026-03-02T11:07:34.187018",
+    "notebook_title": "Penguin Biometrics: Cross-Species Comparative Analysis",
+    "experiment_series": "EXP-2026-PENGUIN",
+    "analyst": "Ornithology Lab Team",
+    "institution": "University of Cape Town"
+  },
+  "analysis_scope": {
+    "species_analyzed": [
+      "Adelie",
+      "Chinstrap",
+      "Gentoo"
+    ],
+    "total_specimens": 87,
+    "experiments_aggregated": 3,
+    "analysis_date_range": "2026-02-06 to 2026-02-06"
+  },
+  "key_results": {
+    "largest_species_by_mass": "Gentoo",
+    "longest_flippers": "Gentoo",
+    "gentoo_vs_adelie_mass_increase": "37.2%",
+    "statistical_significance_p_value": 0.0,
+    "hypothesis_result": "SUPPORTED"
+  },
+  "individual_experiment_results": [
+    {
+      "species": "Adelie",
+      "specimen_count": 27,
+      "specimen_by_sex": {
+        "Male": 14,
+        "Female": 13
+      },
+      "specimen_by_island": {
+        "Biscoe": 10,
+        "Dream": 10,
+        "Torgersen": 7
+      },
+      "mean_body_mass_g": 3705.5555555555557,
+      "std_body_mass_g": 394.2698542226098,
+      "mean_flipper_length_mm": 185.40740740740742,
+      "mean_culmen_length_mm": 38.911111111111104,
+      "mean_culmen_depth_mm": 18.740740740740737,
+      "experiment_id": "EXP-2026-PENGUIN-001-Adelie",
+      "operator": "Dr. Maria Okonkwo",
+      "date_completed": "2026-02-06",
+      "data_source": "penguins_Adelie.csv",
+      "data_clean": "penguins_Adelie_clean.csv",
+      "sexual_dimorphism": {
+        "male_mean_body_mass_g": 3964.285714285714,
+        "female_mean_body_mass_g": 3426.923076923077,
+        "dimorphism_ratio": 1.1568061568061567
+      }
+    },
+    {
+      "species": "Chinstrap",
+      "specimen_count": 30,
+      "specimen_by_sex": {
+        "Female": 19,
+        "Male": 11
+      },
+      "specimen_by_island": {
+        "Dream": 30
+      },
+      "mean_body_mass_g": 4109.466666666666,
+      "std_body_mass_g": 326.9507748811773,
+      "mean_flipper_length_mm": 217.86666666666667,
+      "mean_culmen_length_mm": 49.11666666666667,
+      "mean_culmen_depth_mm": 15.416666666666666,
+      "experiment_id": "EXP-2026-PENGUIN-002-Chinstrap",
+      "operator": "Dr. Maria Okonkwo",
+      "date_completed": "2026-02-06",
+      "data_source": "penguins_Chinstrap.csv",
+      "data_clean": "penguins_Chinstrap_clean.csv",
+      "sexual_dimorphism": {
+        "male_mean_body_mass_g": 4290.909090909091,
+        "female_mean_body_mass_g": 4004.4210526315787,
+        "dimorphism_ratio": 1.0715429357982327
+      }
+    },
+    {
+      "species": "Gentoo",
+      "specimen_count": 30,
+      "specimen_by_sex": {
+        "Male": 18,
+        "Female": 12
+      },
+      "specimen_by_island": {
+        "Biscoe": 30
+      },
+      "mean_body_mass_g": 4564.8,
+      "std_body_mass_g": 223.71077386846525,
+      "mean_flipper_length_mm": 225.63333333333333,
+      "mean_culmen_length_mm": 50.326666666666675,
+      "mean_culmen_depth_mm": 15.63,
+      "experiment_id": "EXP-2026-PENGUIN-003-Gentoo",
+      "operator": "Dr. Maria Okonkwo",
+      "date_completed": "2026-02-06",
+      "data_source": "penguins_Gentoo.csv",
+      "data_clean": "penguins_Gentoo_clean.csv",
+      "sexual_dimorphism": {
+        "male_mean_body_mass_g": 4713.888888888889,
+        "female_mean_body_mass_g": 4341.166666666667,
+        "dimorphism_ratio": 1.0858576163601694
+      }
+    }
+  ],
+  "cross_species_comparison_table": [
+    {
+      "species": "Adelie",
+      "specimen_count": 27,
+      "specimen_by_sex": {
+        "Male": 14,
+        "Female": 13
+      },
+      "specimen_by_island": {
+        "Biscoe": 10,
+        "Dream": 10,
+        "Torgersen": 7
+      },
+      "mean_body_mass_g": 3705.5555555555557,
+      "std_body_mass_g": 394.2698542226098,
+      "mean_flipper_length_mm": 185.40740740740742,
+      "mean_culmen_length_mm": 38.911111111111104,
+      "mean_culmen_depth_mm": 18.740740740740737,
+      "experiment_id": "EXP-2026-PENGUIN-001-Adelie",
+      "operator": "Dr. Maria Okonkwo",
+      "date_completed": "2026-02-06",
+      "data_source": "penguins_Adelie.csv",
+      "data_clean": "penguins_Adelie_clean.csv",
+      "sexual_dimorphism": {
+        "male_mean_body_mass_g": 3964.285714285714,
+        "female_mean_body_mass_g": 3426.923076923077,
+        "dimorphism_ratio": 1.1568061568061567
+      }
+    },
+    {
+      "species": "Chinstrap",
+      "specimen_count": 30,
+      "specimen_by_sex": {
+        "Female": 19,
+        "Male": 11
+      },
+      "specimen_by_island": {
+        "Dream": 30
+      },
+      "mean_body_mass_g": 4109.466666666666,
+      "std_body_mass_g": 326.9507748811773,
+      "mean_flipper_length_mm": 217.86666666666667,
+      "mean_culmen_length_mm": 49.11666666666667,
+      "mean_culmen_depth_mm": 15.416666666666666,
+      "experiment_id": "EXP-2026-PENGUIN-002-Chinstrap",
+      "operator": "Dr. Maria Okonkwo",
+      "date_completed": "2026-02-06",
+      "data_source": "penguins_Chinstrap.csv",
+      "data_clean": "penguins_Chinstrap_clean.csv",
+      "sexual_dimorphism": {
+        "male_mean_body_mass_g": 4290.909090909091,
+        "female_mean_body_mass_g": 4004.4210526315787,
+        "dimorphism_ratio": 1.0715429357982327
+      }
+    },
+    {
+      "species": "Gentoo",
+      "specimen_count": 30,
+      "specimen_by_sex": {
+        "Male": 18,
+        "Female": 12
+      },
+      "specimen_by_island": {
+        "Biscoe": 30
+      },
+      "mean_body_mass_g": 4564.8,
+      "std_body_mass_g": 223.71077386846525,
+      "mean_flipper_length_mm": 225.63333333333333,
+      "mean_culmen_length_mm": 50.326666666666675,
+      "mean_culmen_depth_mm": 15.63,
+      "experiment_id": "EXP-2026-PENGUIN-003-Gentoo",
+      "operator": "Dr. Maria Okonkwo",
+      "date_completed": "2026-02-06",
+      "data_source": "penguins_Gentoo.csv",
+      "data_clean": "penguins_Gentoo_clean.csv",
+      "sexual_dimorphism": {
+        "male_mean_body_mass_g": 4713.888888888889,
+        "female_mean_body_mass_g": 4341.166666666667,
+        "dimorphism_ratio": 1.0858576163601694
+      }
+    }
+  ]
+}

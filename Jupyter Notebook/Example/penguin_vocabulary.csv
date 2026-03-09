@@ -1,0 +1,8 @@
+column_name,description,data_type,unit,allowed_values,min_value,max_value,required
+species,Penguin species,categorical,,Adelie|Chinstrap|Gentoo,,,yes
+island,Island of observation (Palmer Archipelago),categorical,,Biscoe|Dream|Torgersen,,,yes
+sex,Sex of penguin (field/measurement derived),categorical,,Female|Male,,,no
+culmen_length_mm,Bill length from tip to skull,float,mm,,25.650,65.250,yes
+culmen_depth_mm,Bill depth at base,float,mm,,10.787,21.500,yes
+flipper_length_mm,Flipper length shoulder to tip,float,mm,,139.125,234.000,yes
+body_mass_g,Body mass,float,g,,2750.000,5000.000,yes
