@@ -1,16 +1,17 @@
 services:
   eln-notebook:
-    build: .
+    #build: .
+    # This naming convention allows for easy pushing/pulling
+    image: schatzm/eln-notebook:latest
     ports:
       - "8888:8888"
     volumes:
-      - .:/home/jovyan/work  # Syncs your local files with the container
-    # WARNING: Security bypass - No token or password set
+      - .:/home/jovyan/work
     command: >
       jupyter lab 
       --ip=0.0.0.0 
       --port=8888 
       --no-browser 
       --allow-root 
-      --ServerApp.token=''     
+      --ServerApp.token=''      
       --ServerApp.password=''
